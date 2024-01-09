@@ -38,14 +38,14 @@ class ProcessDataset(object):
                 combination of these two types of features
         """
         if self.embedF == 1:
-            fn1 = os.path.join(self.data_dir, 'ess_embedFeature.pickle')
-            fn2 = os.path.join(self.data_dir, 'ness_embedFeature.pickle')
+            fn1 = os.path.join(self.data_dir, 'seqFeature.pkl')
+            fn2 = os.path.join(self.data_dir, 'seqFeature.pkl')
         elif self.embedF == 0:
-            fn1 = os.path.join(self.data_dir, 'ess_seqFeature.pickle')
-            fn2 = os.path.join(self.data_dir, 'ness_seqFeature.pickle')
+            fn1 = os.path.join(self.data_dir, 'seqFeature.pkl')
+            fn2 = os.path.join(self.data_dir, 'seqFeature.pkl')
         else:
-            fn1 = os.path.join(self.data_dir, 'ess_seqFeature_embedF.pickle')
-            fn2 = os.path.join(self.data_dir, 'ness_seqFeature_embedF.pickle')
+            fn1 = os.path.join(self.data_dir, 'seqFeature.pkl')
+            fn2 = os.path.join(self.data_dir, 'seqFeature.pkl')
         
         if all([os.path.isfile(fn1), os.path.isfile(fn2)]):
             essGeneFeatTable = load_pickle(fn1)
